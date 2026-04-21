@@ -11,7 +11,7 @@ raw meter data off-site.
 
 The core idea: split the model into a shared **multi-scale BiMamba backbone**
 and two small task-specific heads. In every federated round, the backbone is
-averaged across *all* participating clients regardless of their task, while
+aggregated across *all* participating clients regardless of their task, while
 each head is averaged only within its own task group. This cross-task backbone
 sharing gives the anomaly head a cleaner reconstruction of "normal" building
 behaviour and noticeably improves precision, at a negligible cost in
@@ -32,8 +32,6 @@ forecasting accuracy.
 - `data_provider/` — per-task window datasets and federated dataloaders.
 - `experiments/run_baselines.py` — driver for the centralised baselines.
 - `main.py` — top-level entry point.
-- `results/` — metrics JSONs and convergence histories reported in the paper.
-- `paper/` — LaTeX source, figures, and the compiled PDF.
 
 ## Datasets
 
